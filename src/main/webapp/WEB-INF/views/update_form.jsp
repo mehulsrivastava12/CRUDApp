@@ -11,7 +11,8 @@
 		<div class="row">
 			<div class="col-md-6 offset-md-3">
 				<h1 class="text-center mb-3">Change Product Details</h1>
-				<form action="handle-product" method="post">
+				<form action="${pageContext.request.contextPath }/handle-product" method="post">
+				<input type="text" value="${product.id }" name="id" />
 					<div class="form-group">
 						<label for="name">Product Name</label><input type="text"
 							class="form-control" id="name" area-describedby="emailhelp"
@@ -21,8 +22,7 @@
 					<div class="form-group">
 						<label for="name">Product Description</label>
 						<textarea class="form-control" name="description" id="description"
-							rows="5" placeholder="Enter the product decription" >
-							${product.description }</textarea>
+							rows="5" placeholder="Enter the product decription" >${product.description }</textarea>
 					</div>
 					<div class="form-group">
 						<label for="price">Product Price</label> <input type="text"
@@ -33,7 +33,7 @@
 					<div class="container text-center">
 						<a href="${pageContext.request.contextPath }/"
 							class="btn btn-outline-danger">Back</a>
-						<button type="submit" class="btn btn-primary">Add</button>
+						<button type="submit" class="btn btn-primary">Update</button>
 					</div>
 				</form>
 			</div>

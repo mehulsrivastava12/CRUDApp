@@ -52,7 +52,7 @@ public class MainController {
 	
 	@RequestMapping("/update/{productId}")
 	public String updateForm(@PathVariable("productId") int pid,Model model) {
-		Product product = this.productDao.getProduct(pid);
+		Product product=this.productDao.getProduct(pid);
 		model.addAttribute("product",product);
 		return "update_form";
 	}

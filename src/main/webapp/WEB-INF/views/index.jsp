@@ -21,7 +21,7 @@
   <tbody>
     <c:forEach items="${products }" var="p">
     <tr>
-      <th scope="row">TECHONLY${p.id }</th>
+      <th scope="row">${p.id }</th>
       <td>${p.name }</td>
       <td>${p.description }</td>
       <td class="font-weight-bold">&#x20B9; ${p.price }</td>
